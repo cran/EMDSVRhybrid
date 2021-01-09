@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+importFrom("stats", "predict")
+import(EMD)
+import(e1071)
