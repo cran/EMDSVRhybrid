@@ -1,4 +1,11 @@
-d26e0d44158c3c680c91dbce249558c8 *DESCRIPTION
-cebaad586d4eb2c76a2dc35505e1b1ca *NAMESPACE
-d22c67cac0d6ebd2a93ddc34aeb0a0bf *R/EMDSVRhybrid.R
-8c10e2253654f89f2a4853cb7ddb3eb2 *man/EMDSVRhybrid.Rd
+dbf4199a5fabc63328714bf28acce1e8 *DESCRIPTION
+951b367073f2c8d761dbcacd8cb18d2f *NAMESPACE
+f6e1cdd1eca66a1fafaddb8e7b9b426a *R/EMDSVRhybrid.R
+a1947d94056d655c3b1b9103e97e1c7c *build/vignette.rds
+c1d3fed7dfd66d4b4d703e85d8c87c63 *inst/doc/EMDSVRhybrid.R
+816b33fa67a743779a89bc7f2dfcc61c *inst/doc/EMDSVRhybrid.Rmd
+e5768efe94b8265cc7ca364653334d9e *inst/doc/EMDSVRhybrid.html
+82348b546180b81cea38eedf252b0ad2 *man/EMDSVRhybrid.Rd
+6452d16ff308ff60faa1a5f434e6fe10 *tests/testthat.R
+32d0b31a244678ef9e3594d8d87443df *tests/testthat/test.EMDSVRhybrid.R
+816b33fa67a743779a89bc7f2dfcc61c *vignettes/EMDSVRhybrid.Rmd

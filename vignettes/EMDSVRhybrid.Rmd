@@ -1,0 +1,76 @@
+---
+title: "EMD based SVR model"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{EMD based SVR model}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+**Application of Empirical Mode Decomposition based Artificial Neural Network **
+
+## Authors
+
+Pankaj Das (https://orcid.org/0000-0003-1672-2502)
+
+Achal Lama
+
+Girish Kumar Jha
+
+
+
+## Introduction
+
+The EMDSVR R package is designed for application of Empirical Mode Decomposition based Support Vector Regression for univariate time series forecasting. It also provide you with accuracy measures along with an option to select the proportion of training and testing data sets. Users can choose among the available choices of parameters of Empirical Mode Decomposition for fitting the SVR Models. In this package we have modelled the dependency of the study variable assuming first order autocorrelation. This package will help the researchers working in the area of hybrid machine learning models.
+
+## Function in the R package
+
+**EMDSVRhybrid**- The EMDSVRhybrid function helps to fit the Empirical Mode Decomposition based Support Vector Regression model.
+
+
+## Background
+
+Empirical mode decomposition (EMD) is one of the latest signal decomposition techniques,  first proposed by Huang et al. (1996). It assumes that the
+data have many coexisting oscillatory modes of significantly distinct frequencies and these modes superimpose on each other and form an observable time series. EMD decomposes original non-stationary and nonlinear data into a finite and small number of independent sub-series (including intrinsic mode
+functions and a final residue). Further Support Vector Regression model applied to each decomposed items to forecast them. Finally all forecasted values are aggregated to produce final forecast value (Das et al., 2019, 2020, 2022, 2023).
+
+
+## Reference
+
+*Dragomiretskiy, K. and Zosso, D.(2014). Variational Mode Decomposition. IEEE Transactions on Signal Processing, 62(3):531-544.(doi: 10.1109/TSP.2013.2288675).*
+
+*Das, P., Jha, G. K., Lama, A., Parsad, R. and Mishra, D. (2020). Empirical Mode Decomposition based Support Vector Regression for Agricultural Price Forecasting. Indian Journal of Extension Education, 56(2):7-12.(http://krishi.icar.gov.in/jspui/handle/123456789/44138).*
+
+*Das, P. Jha, G. K. and Lama, A. (2023). Empirical Mode Decomposition Based Ensemble Hybrid Machine Learning Models for Agricultural Commodity Price Forecasting. Statistics and Applications, 21(1),99-112.(http://krishi.icar.gov.in/jspui/handle/123456789/77772).*
+
+*Das, P., Jha, G. K., Lama, A. and Bharti (2022). EMD-SVR Hybrid Machine Learning Model and its Application in Agricultural Price Forecasting. Bhartiya Krishi Anusandhan Patrika. (DOI: 10.18805/BKAP385)*
+
+*Das, P. (2019). Study On Machine Learning Techniques Based Hybrid Model for Forecasting in Agriculture. Published Ph.D. Thesis.*
+
+*Choudhury, K., Jha, G. K., Das, P. and Chaturvedi, K. K. (2019). Forecasting Potato Price using Ensemble Artificial Neural Networks. Indian Journal of Extension Education, 55(1):71-77.(http://krishi.icar.gov.in/jspui/handle/123456789/44873).*
+
+*Das, P., Lama, A. and Jha, G. K. (2022). Variational Mode Decomposition based Machine Learning Models Optimized with Genetic Algorithm for Price Forecasting. Journal of the Indian Society of Agricultural Statistics, 76(3), 141-150. (http://krishi.icar.gov.in/jspui/handle/123456789/76648)*
+
+
+```{r setup}
+##Example how the package works
+library(EMDSVRhybrid)
+
+#Application
+# A Random time series dataset generation
+set.seed(6)
+example_data=rnorm(500,30,5)
+
+#Parameter setting
+k <-  0.9
+
+#Application of EMDANN model
+EMDSVRhybrid(example_data,0.9,funct="radial")
+
+```

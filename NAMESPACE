@@ -1,4 +1,3 @@
 exportPattern("^[[:alpha:]]+")
-importFrom("stats", "predict")
-import(EMD)
-import(e1071)
+importFrom("stats","predict")
+import("EMD","e1071")

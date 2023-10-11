@@ -1,18 +1,17 @@
 
-
 #EMD based SVR model
 
-EMDSVRhybrid=function(data,k,funct="")
+EMDSVRhybrid <- function(data, k, funct="")
 {
-  data_org=as.matrix(data)
-  xt=as.matrix(data_org)
-  xt=as.vector(data_org)
+  data_org <- as.matrix(data)
+  xt <- as.matrix(data_org)
+  xt <- as.vector(data_org)
   #EMD
   #code for display no.of imf and residual
 
-  try=emd(xt,boundary = "wave")
+  try <- emd(xt,boundary = "wave")
 
-  imf_extr=try$imf
+  imf_extr <- try$imf
 
   emd_residual=try$residue
   no_of_imf=try$nimf
@@ -87,6 +86,6 @@ EMDSVRhybrid=function(data,k,funct="")
   #Mean absolute percent error (MAPE)
   MAPE_out=mean(abs((test_data_original-final_prediction)/test_data_original))
   prediction_accuracy=cbind(RMSE_out,MAD_out,MAPE_out)
-  output_f=list(final_prediction,prediction_accuracy)
+  output_f=list(Prediction_Accuracy_EMDSVR =prediction_accuracy, Final_Prediction_EMDSVR= final_prediction)
   return(output_f)
 }
